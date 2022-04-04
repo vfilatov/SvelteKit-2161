@@ -1,8 +1,12 @@
-<script>
-  import Icon from 'svelte-awesome';
-  import { spinner as mySpinner} from 'svelte-awesome/icons';
+<script lang="ts">
+  import { Button, Popover } from 'sveltestrap';
 </script>
 
-<h1>Header</h1>
-<hr />
-<p>Hello, World</p>
+<Button id="btn">Click me</Button>
+<Popover placement="right" target="btn">
+  <div slot="title">
+    <i>Hello</i> <b>World!</b>
+  </div>
+  This Popover has HTML in the title passed as a slot.
+</Popover>
+
